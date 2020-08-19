@@ -1,0 +1,9 @@
+package com.moxito.SpringDemos;
+
+public class BaseballCoach {
+	
+	public String getDailyWorkout() {
+		return "spend 30 minutes in ground";
+	}
+
+}
