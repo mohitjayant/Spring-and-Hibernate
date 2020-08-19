@@ -1,8 +1,0 @@
-package com.moxito.SpringDemos;
-
-public class App {
-	public static void main(String[] args) {
-		Coach theCoach = new BaseballCoach();
-		System.out.println(theCoach.getDailyWorkout());
-	}
-}
