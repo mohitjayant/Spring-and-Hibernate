@@ -9,8 +9,24 @@
     http://www.springframework.org/schema/aop 
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
     ">
- 
-	<bean id="myGolfCoach" class="com.moxito.SpringDemos.GolfCoach">
+    
+    <bean id="myFortune" class="com.moxito.SpringDemos.HappyFortuneService"></bean>
+    
+	<bean id="myCoach" class="com.moxito.SpringDemos.TrackCoach">
+	<!-- Set up constructor injection -->
+	
+	<constructor-arg ref="myFortune">
+	</constructor-arg>
+	
+	</bean>
+	
+	<bean id="myCricketCoach" class="com.moxito.SpringDemos.CricketCoach">
+	
+	<!-- Setup Setter injection -->
+	<property name="fortuneService" ref="myFortune"></property>
+	<property name="emailAddress" value="mkumar5@ce.iitr.ac.in"></property>
+	<property name="team" value="Chennai Super King"></property>
+	
 	</bean>
 
 </beans>
