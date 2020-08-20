@@ -9,8 +9,9 @@
     http://www.springframework.org/schema/aop 
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
     ">
-    
-    <bean id="myFortune" class="com.moxito.SpringDemos.HappyFortuneService"></bean>
+    <!-- Load the file -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    <bean id="myFortune" class="com.moxito.SpringDemos.RandomFortuneService"></bean>
     
 	<bean id="myCoach" class="com.moxito.SpringDemos.TrackCoach">
 	<!-- Set up constructor injection -->
@@ -24,8 +25,8 @@
 	
 	<!-- Setup Setter injection -->
 	<property name="fortuneService" ref="myFortune"></property>
-	<property name="emailAddress" value="mkumar5@ce.iitr.ac.in"></property>
-	<property name="team" value="Chennai Super King"></property>
+	<property name="emailAddress" value="${foo.email}"></property>
+	<property name="team" value="${foo.team}"></property>
 	
 	</bean>
 
