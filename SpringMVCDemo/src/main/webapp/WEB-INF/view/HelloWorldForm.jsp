@@ -7,7 +7,7 @@
 <title>HTML-Input form</title>
 </head>
 <body>
-	<form action="addFromDataModel" method="GET">
+	<form action="addFromDataModelTwo" method="GET">
 		<input type="text" name="studentName" placeholder="What's your name?"/>
 		<input type="submit"/>
 	</form>
