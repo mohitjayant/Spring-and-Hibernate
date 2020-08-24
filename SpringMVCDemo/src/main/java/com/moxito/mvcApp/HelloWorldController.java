@@ -5,8 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
 	// need a controller method to show HTML form
@@ -29,6 +31,15 @@ public class HelloWorldController {
 		String theName = request.getParameter("studentName");
 		theName = theName.toUpperCase();
 		String message = "Yo! " + theName;
+		model.addAttribute("message", message);
+		return "helloWorld";
+	}
+
+	@RequestMapping("/addFromDataModelTwo")
+	public String addFormDataModelTwo(@RequestParam("studentName") String theName, Model model) {
+
+		theName = theName.toUpperCase();
+		String message = "Hey, My friend from v2! " + theName;
 		model.addAttribute("message", message);
 		return "helloWorld";
 	}
