@@ -7,5 +7,9 @@
 
 <a href="student/showForm">Click here for Student Form..</a>
 
+<br><br>
+
+<a href="customer/showForm">Click here for Customer Form..</a>
+
 </body>
 </html>
