@@ -20,9 +20,9 @@ public class PrimaryKeyDemo {
 
 			// create 3 Student object
 			System.out.println("Creating 3 Student Object...");
-			Student theStudent1 = new Student("Sahaj", "Jayant", "mohit8790j@gmail.com");
-			Student theStudent2 = new Student("Naman", "Bajaj", "namanbajaj@gmail.com");
-			Student theStudent3 = new Student("Mayur", "Khandelwal", "mayur@gmail.com");
+			Student theStudent1 = new Student("Navneet", "Singh", "navneet.singh@magicbricks.com");
+			Student theStudent2 = new Student("Sarika", "Grewal", "sarika.grewal@magicbricks.com");
+			Student theStudent3 = new Student("Mahi", "Singh", "mahi.singh@magicbricks.com");
 			// Start a transaction
 			session.beginTransaction();
 			// save the Student object
